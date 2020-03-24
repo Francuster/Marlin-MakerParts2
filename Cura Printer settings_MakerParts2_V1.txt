@@ -1,0 +1,35 @@
+Maker Parts 2 Settings
+
+Start G-code:
+G21       ;metric values
+G90       ;absolute positioning
+M82       ;set extruder to absolute mode
+
+;Put printing message on LCD screen
+M117 Printing...
+
+-----------------------
+End G-code
+M104 S0     ;extruder heater off
+M140 S0     ;heated bed heater off (if you have it)
+G91         ;relative positioning
+G1 E-1 F300 ;retract the filament a bit
+G1 Z0.5 E-5 F840 ;move Z up a bit and retract even more
+G28 X0 Y0   ;home X/Y, so the head is out of the way
+M84         ;steppers off
+G90         ;absolute positioning
+
+-----------------------
+Print Speed:
+14 mm/s
+Initial Layer Speed:
+9.8 mm/s
+
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 3200, 93 }
+
+
+--------------------------
+M82       ;set extruder to absolute mode
+G92 E0    ;zero the extruded length
+G1 F200 E100              ;extrude 100mm of feed stock
+G92 E0                  ;zero the extruded length again
