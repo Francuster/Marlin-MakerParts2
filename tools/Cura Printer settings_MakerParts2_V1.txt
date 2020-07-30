@@ -33,3 +33,10 @@ M82       ;set extruder to absolute mode
 G92 E0    ;zero the extruded length
 G1 F200 E100              ;extrude 100mm of feed stock
 G92 E0                  ;zero the extruded length again
+
+
+---------
+driver voltage
+x = 1.6
+y = 1
+z = 1.9
