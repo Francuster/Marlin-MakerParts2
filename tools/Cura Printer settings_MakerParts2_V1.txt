@@ -40,3 +40,9 @@ driver voltage
 x = 1.6
 y = 1
 z = 1.9
+
+recomended:
+Eje X: 0.8 V
+Eje Y: 1.0 V
+Eje Z: 1.1 V
+Extrusores: 1.1 V
